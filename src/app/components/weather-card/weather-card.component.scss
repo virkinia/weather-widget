@@ -65,16 +65,10 @@ body {
     height: 50px;
     top: 0;
     float: right;
-    margin: 40px 40px 0 0;
+    margin: 0 60px 0 0;
     animation: weather-icon-move 5s ease-in-out infinite;
 }
 
-.sun {
-    background: $color4;
-	border-radius: 50%;
-	box-shadow: rgba(255,255,0,0.1) 0 0 0 4px;
-    animation: light 800ms ease-in-out infinite alternate, weather-icon-move 5s ease-in-out infinite;
-}
 
 @keyframes light {
     from {
@@ -85,49 +79,7 @@ body {
     }
 }
 
-.cloud {
-    margin-right:60px;
-    background: darken($color1, 5%);
-	border-radius: 20px;
-    width: 25px;
-    height: 25px;
-    box-shadow:
-		darken($color1, 5%) 24px -6px 0 2px,
-		darken($color1, 5%) 10px 5px 0 5px,
-		darken($color1, 5%) 30px 5px 0 2px,
-        darken($color1, 5%) 11px -8px 0 -3px,
-        darken($color1, 5%) 25px 11px 0 -1px;
 
-
-    &:after {
-        content: "";
-        position: absolute;
-        border-radius: 10px;
-        background-color: transparent;
-        width: 4px;
-        height: 12px;
-        left: 0;
-        top: 31px;
-        transform: rotate(30deg);
-
-        animation: rain 800ms ease-in-out infinite alternate;
-    }
-}
-
-@keyframes rain {
-    from {
-        box-shadow:
-        $color5 8px 0px,
-		$color5 32px -6px,
-		$color5 20px 0px;
-    }
-    to {
-        box-shadow:
-        $color5 8px 6px,
-		$color5 32px 0px,
-		$color5 20px 6px;
-    }
-}
 
 @keyframes weather-icon-move {
 	50% {
@@ -135,21 +87,6 @@ body {
     }
 }
 
-.inspiration {
-    margin-top: 80px;
-    color: darken($color1, 25%);
-    font-family: 'Lato', sans-serif;
-    font-weight:300;
-    font-size:24px;
-    text-align: center;
-
-
-    a {
-        color: #FF8F8F;
-        font-weight:400;
-        animation: all 300ms ease-in-out;
-    }
-}
 
 @keyframes appear {
   0% {

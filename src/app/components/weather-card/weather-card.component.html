@@ -1,8 +1,10 @@
 <div class="weather-wrapper">
 
   <div class="weather-card london">
-      <div class="weather-icon cloud"></div>
-      <h1>{{temp}}º</h1>
-      <p>{{city}}</p>
+      <div class="weather-icon">
+        <img id="wicon" [src]="weather?.icon" alt="Weather icon">
+      </div>
+      <h1>{{weather?.tempeture}}º</h1>
+      <p>{{weather?.city}}</p>
   </div>
 </div>
