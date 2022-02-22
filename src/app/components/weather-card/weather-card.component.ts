@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { catchError, of } from 'rxjs';
 import { Weather } from 'src/app/models/weather.model';
 import { NotificationService } from 'src/app/services/notification.service';
@@ -7,7 +7,8 @@ import { OpenWeatherService } from 'src/app/services/open-weather.service';
 @Component({
   selector: 'app-weather-card',
   templateUrl: './weather-card.component.html',
-  styleUrls: ['./weather-card.component.scss']
+  styleUrls: ['./weather-card.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class WeatherCardComponent implements OnInit {
 

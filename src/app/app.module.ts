@@ -12,7 +12,9 @@ import { WeatherCardComponent } from './components/weather-card/weather-card.com
 import { CityInputComponent } from './components/city-input/city-input.component';
 
 @NgModule({
-  entryComponents: [AppComponent],
+  entryComponents: [AppComponent, WeatherCardComponent,
+    CityInputComponent,
+    NotificationComponent],
   declarations: [
     AppComponent,
     WeatherCardComponent,

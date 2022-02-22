@@ -1,11 +1,12 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
 
 @Component({
   selector: 'app-city-input',
   templateUrl: './city-input.component.html',
-  styleUrls: ['./city-input.component.scss']
+  styleUrls: ['./city-input.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CityInputComponent implements OnInit {
 

@@ -101,7 +101,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bulma/css/bulma.css"
+              "../node_modules/bulma/css/bulma.min.css"
             ],
             "scripts": []
           }
