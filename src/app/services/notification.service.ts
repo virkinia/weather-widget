@@ -17,9 +17,9 @@ export class NotificationService {
     this._notificationSource.next(value);
 
     if(value) {
-     /*  setTimeout(() => {
+       setTimeout(() => {
         this.notification = false;
-      }, 5000); */
+      }, 5000);
     }
   }
 
