@@ -75,7 +75,8 @@
               "browserTarget": "weather-widget:build:production"
             },
             "development": {
-              "browserTarget": "weather-widget:build:development"
+              "browserTarget": "weather-widget:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -99,7 +100,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bulma/css/bulma.css"
             ],
             "scripts": []
           }

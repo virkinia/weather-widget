@@ -1,0 +1,6 @@
+<ng-container *ngIf="notification$ | async ; let mostrar">
+  <div *ngIf="mostrar" class="notification is-warning">
+    <button class="delete"></button>
+    Oops! Somethin was wrong 💥
+  </div>
+</ng-container>

@@ -1,0 +1,13 @@
+<div class="weather-wrapper">
+
+  <div class="weather-card london">
+      <div *ngIf="weather?.icon"class="weather-icon">
+        <img id="wicon" [src]="weather?.icon" alt="Weather icon">
+      </div>
+      <p class="weather-day">{{weather?.day}}</p>
+      <h1>{{weather?.tempeture}}º</h1>
+      <p class="weather-city">{{weather?.city}}</p>
+  </div>
+</div>
+
+
