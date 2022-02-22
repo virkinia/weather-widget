@@ -1,23 +1,4 @@
 import * as moment from "moment";
-import { Moment } from "moment";
-
-export interface WeatherResponse {
-
-  coord: Coord;
-  weather: Weather[];
-  base: string;
-  main: Main;
-  visibility: number;
-  wind: Wind;
-  clouds: Clouds;
-  dt: number;
-  sys: Sys;
-  timezone: number;
-  id: number;
-  name: string;
-  cod: number;
-
-}
 
 
 
@@ -40,7 +21,7 @@ export class Weather {
   set weather(arg: WeatherResponse) {
     this._tempeture = arg.main.temp;
     this._city = arg.name;
-    this._day = moment.unix(1560350645).format("MM/DD/YYYY");
+    this._day = moment.unix(arg.dt).format("DD/MM/YYYY");
 
     this._icon = `http://openweathermap.org/img/wn/${arg.weather[0].icon}@2x.png`
   }
@@ -76,6 +57,25 @@ export class Weather {
   get icon(): string {
     return this._icon;
   }
+
+}
+
+
+export interface WeatherResponse {
+
+  coord: Coord;
+  weather: Weather[];
+  base: string;
+  main: Main;
+  visibility: number;
+  wind: Wind;
+  clouds: Clouds;
+  dt: number;
+  sys: Sys;
+  timezone: number;
+  id: number;
+  name: string;
+  cod: number;
 
 }
 
