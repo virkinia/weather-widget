@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { catchError, map, Observable, of, throwError } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Weather, WeatherResponse } from '../models/weather.model';
 
@@ -23,6 +23,12 @@ export class OpenWeatherService {
     });
 
     return this.http.get<WeatherResponse>(this.URL, { params })
-    .pipe(map(weatherResponse => new Weather(weatherResponse)) );
+    .pipe(map(weatherResponse => {
+      const weather  = new Weather();
+      weather.weather = weatherResponse;
+      return weather;
+    }), catchError((err) => {
+      return throwError( () => new Error (err));
+  ;}) );
   }
 }

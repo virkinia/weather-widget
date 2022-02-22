@@ -1,1 +1,4 @@
-<app-weather-card></app-weather-card>
+<app-weather-card [selectedCity]="city"></app-weather-card>
+<app-city-input (onNewCity)="changeCity($event)"></app-city-input>
+
+<app-notification class="app-notification"></app-notification>

@@ -28,14 +28,21 @@ export class Weather {
   _day: string;
   _icon: string;
 
-  constructor(arg: WeatherResponse) {
+  constructor() {
 
+    this._tempeture = 0;
+    this._city = '-';
+    this._day = '-';
+    this._icon = ''
+
+  }
+
+  set weather(arg: WeatherResponse) {
     this._tempeture = arg.main.temp;
     this._city = arg.name;
     this._day = moment.unix(1560350645).format("MM/DD/YYYY");
 
     this._icon = `http://openweathermap.org/img/wn/${arg.weather[0].icon}@2x.png`
-
   }
 
   set tempeture (value: number) {
