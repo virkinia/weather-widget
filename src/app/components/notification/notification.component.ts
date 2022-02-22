@@ -19,4 +19,8 @@ export class NotificationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  closeNotification() {
+    this.notificationService.notification = false;
+  }
+
 }
